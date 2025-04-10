@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hydraulic Power Pack</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+    body {
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+    nav {
+      width: 100%;
+      background: linear-gradient(to right, #aa0601, #03229e);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    .logo {
+      color: white;
+      font-size: 22px;
+      font-weight: bold;
+    }
+    .nav-links {
+      display: flex;
+    }
+    .nav-links a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-size: 16px;
+    }
+    .nav-links a:hover {
+      text-decoration: underline;
+    }
+    .menu-btn {
+      display: none;
+      font-size: 26px;
+      color: white;
+      background: none;
+      border: none;
+      cursor: pointer;
+    }
+    header {
+      text-align: center;
+      padding: 50px 20px;
+      background: #f4f4f4;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 10px;
+    }
+    header p {
+      font-size: 18px;
+      color: #555;
+    }
+    .slider {
+  width: 80%;
+  max-width: 800px;
+  margin: 40px auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+  aspect-ratio: 2 / 1; /* Automatically keeps width:height ratio */
+}
+
+.slides {
+  display: flex;
+  width: 400%;
+  height: 100%;
+  animation: slide 12s infinite;
+}
+
+.slides img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain; /* Image will fully fill, no empty space, no cut-off */
+}
+
+
+    @keyframes slide {
+      0% { margin-left: 0; }
+      20% { margin-left: 0; }
+      25% { margin-left: -100%; }
+      45% { margin-left: -100%; }
+      50% { margin-left: -200%; }
+      70% { margin-left: -200%; }
+      75% { margin-left: -300%; }
+      95% { margin-left: -300%; }
+      100% { margin-left: 0; }
+    }
+    .info-section {
+      max-width: 1000px;
+      margin: 50px auto;
+      padding: 20px;
+      text-align: center;
+    }
+    .info-section h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #0323a3;
+    }
+    .info-section p {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #333;
+    }
+    .info-section ul {
+      margin-top: 15px;
+      text-align: left;
+      list-style: disc inside;
+      font-size: 17px;
+    }
+    footer {
+      margin-top: auto;
+      background: linear-gradient(to right, #aa0601, #03229e);
+      color: white;
+      padding: 30px 20px;
+    }
+    .footer-container {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      max-width: 1000px;
+      margin: auto;
+    }
+    .footer-item {
+      flex: 1 1 30%;
+      margin: 10px 0;
+    }
+    .footer-item h3 {
+      margin-bottom: 10px;
+    }
+    .footer-item p, .footer-item a {
+      color: white;
+      font-size: 14px;
+      text-decoration: none;
+    }
+    .footer-item a:hover {
+      text-decoration: underline;
+    }
+    .footer-bottom {
+      text-align: center;
+      margin-top: 20px;
+      font-size: 14px;
+      border-top: 1px solid rgba(255,255,255,0.3);
+      padding-top: 10px;
+    }
+    @media (max-width: 768px) {
+      .menu-btn {
+        display: block;
+      }
+      .nav-links {
+        display: none;
+        flex-direction: column;
+        background: #0429bb96;
+        position: absolute;
+        top: 60px;
+        right: 30px;
+        width: 200px;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+      .nav-links a {
+        padding: 12px 20px;
+        margin: 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      }
+      .nav-links.active {
+        display: flex;
+      }
+      .slider {
+        width: 90%;
+      }
+      .footer-container {
+        flex-direction: column;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<!-- Navbar -->
+<nav>
+  <div class="logo">BM Hydromech</div>
+  <button class="menu-btn" onclick="toggleMenu()">☰</button>
+  <div class="nav-links" id="navLinks">
+    <a href="index.html">Home</a>
+    <a href="#about">About Power Pack</a>
+  </div>
+</nav>
+
+<!-- Header -->
+<header id="home">
+  <h1>Hydraulic Power Pack</h1>
+  <p>Efficient, Compact, and Reliable Solutions for Hydraulic Applications</p>
+</header>
+
+<!-- Photo Slider -->
+<div class="slider">
+  <div class="slides">
+    <img src="sec.png" alt="Hydraulic Power Pack 1">
+    <img src="sec.png" alt="Hydraulic Power Pack 2">
+    <img src="sec.png" alt="Hydraulic Power Pack 3">
+    <img src="sec.png" alt="Hydraulic Power Pack 4">
+  </div>
+</div>
+
+<!-- Info Section -->
+<section class="info-section" id="about">
+  <h2>About Our Hydraulic Power Pack</h2>
+  <p>
+    Our Hydraulic Power Packs are designed for a variety of industrial applications.
+    They are engineered to deliver high performance and durability even under the most demanding conditions.
+  </p>
+  <ul>
+    <li>Compact and robust design</li>
+    <li>High-efficiency pumps and motors</li>
+    <li>Customizable pressure and flow rates</li>
+    <li>Integrated filtration systems</li>
+    <li>Easy maintenance and long service life</li>
+  </ul>
+</section>
+
+<!-- Footer -->
+<footer id="contact">
+  <div class="footer-container">
+    <div class="footer-item">
+      <h3>Contact Us</h3>
+      <p>Email: info@bmhyrdomech.com</p>
+      <p>Phone: +91 9876543210</p>
+    </div>
+    <div class="footer-item">
+      <h3>Location</h3>
+      <p>123 Industrial Area, Pune, India</p>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    &copy; 2025 BM Hydromech. All rights reserved.
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const navLinks = document.getElementById('navLinks');
+    navLinks.classList.toggle('active');
+  }
+</script>
+
+</body>
+</html>
